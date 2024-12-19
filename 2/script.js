@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const displayPagination = (page) => {
         pagination.innerHTML = '';
         const totalPages = Math.ceil(allNews.length / itemsPerPage);
-        console.log('Total pages:', totalPages); // Отладочное сообщение
+        console.log('Total pages:', totalPages);
         for (let i = 1; i <= totalPages; i++) {
             const pageButton = document.createElement('button');
             pageButton.textContent = i;
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     searchNews.addEventListener('input', function() {
         currentPage = 1;
-        allNews = []; // Сброс всех новостей при новом поиске
+        allNews = [];
         fetchNews(currentPage, searchNews.value);
     });
 
